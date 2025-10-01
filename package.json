@@ -1,0 +1,25 @@
+{
+  "name": "sigsa-cabina-front-v2",
+  "version": "2.0.0",
+  "private": true,
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.28.0",
+    "@reduxjs/toolkit": "^2.3.0",
+    "react-redux": "^9.2.0",
+    "antd": "^5.22.5",
+    "@ant-design/icons": "^5.5.2",
+    "axios": "1.6.8",
+    "react-scripts": "5.0.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "dev": "react-scripts start",
+    "build": "react-scripts build"
+  },
+  "browserslist": {
+    "production": [">0.2%", "not dead"],
+    "development": ["last 1 chrome version"]
+  }
+}
