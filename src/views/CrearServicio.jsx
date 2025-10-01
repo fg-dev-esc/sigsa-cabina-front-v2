@@ -1,6 +1,7 @@
 import React from 'react';
 import { Row, Col, Card } from 'antd';
 import { useSelector } from 'react-redux';
+import { URL_BASE_CLIENTES } from '../constants/url';
 
 const { Meta } = Card;
 
@@ -21,13 +22,25 @@ export default function CrearServicio() {
             const campanias = cliente.campanias && cliente.campanias;
             if (campanias.length === 0) return null;
 
+            const imgUrl = `${URL_BASE_CLIENTES}/GetLogo/${cliente.clienteID}`;
+
             return (
               <Col key={i}>
                 <Meta
                   title={cliente.clienteNombre}
                   style={{ marginBottom: 10, textAlign: 'center' }}
                 />
-                <Card hoverable style={{ width: 240, textAlign: 'center' }}>
+                <Card
+                  hoverable
+                  style={{ width: 240, textAlign: 'center' }}
+                  cover={
+                    <img
+                      style={{ height: 100, width: 210, marginTop: 10, marginLeft: 10 }}
+                      alt="logo"
+                      src={imgUrl}
+                    />
+                  }
+                >
                   {campanias.map((c, j) => (
                     <div key={j} className="campaniaItem">
                       {c.campaniaNombre}

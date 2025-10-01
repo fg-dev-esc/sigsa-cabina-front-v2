@@ -9,3 +9,6 @@ export const { URL_BASE } = window["runConfig"];
 export const URL_LOGIN = `${URL_BASE}/api/auth/login`;
 export const URL_BASE_ALLOWEDBROWSER = `${URL_BASE}/api/AllowedBrowser`;
 export const URL_BASE_VER = `${URL_BASE}/api/Ver`;
+
+export const URL_BASE_CLIENTES = `${URL_BASE}/api/clientes`;
+export const URL_BASE_ASISTENCIAS = `${URL_BASE}/api/asistencias`;

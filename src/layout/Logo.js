@@ -1,15 +1,24 @@
-import React from 'react';
+import logo from "../assets/logo.png";
+import logoSmall from "../assets/logo-small.png";
 
 export default function Logo({ isCollapsed }) {
+  const texto = isCollapsed ? (
+    <img src={logoSmall} className="logo" alt="SIGSA Logo Small" />
+  ) : (
+    <img src={logo} className="logo" alt="SIGSA Logo" />
+  );
+
   return (
-    <div style={{ padding: isCollapsed ? 10 : 20, textAlign: 'center' }}>
-      {!isCollapsed ? (
-        <div style={{ fontSize: 20, fontWeight: 'bold', color: '#ca2228' }}>
-          SIGSA
-        </div>
-      ) : (
-        <div style={{ fontSize: 16, color: '#ca2228' }}>S</div>
-      )}
+    <div
+      style={{
+        fontSize: 20,
+        width: "100%",
+        textAlign: "center",
+        marginTop: 10,
+        color: "orange",
+      }}
+    >
+      {texto}
     </div>
   );
 }
